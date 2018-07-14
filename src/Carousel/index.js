@@ -2,13 +2,13 @@ import React from "react";
 
 import "./style.css";
 
-const Carousel = (props) => {
+const Carousel = ({ carouselData, ...props }) => {
   return (
-    <div className="carousel">
+    <div className="carousel" {...props} >
       <ul className="carousel__items">
-        {Array(3).fill().map((_, i) => (
-          <li key={i} className="carousel__item">
-            San Fransico
+        {carouselData.map(({ text, imageUrl }, i) => (
+          <li key={i} className="carousel__item" style={{ backgroundImage: `url(${imageUrl})` }}>
+            {text}
           </li>
         ))}
       </ul>

@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+#root {
+  height: 100%;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
   background: #eee;
 }
 
@@ -12,23 +18,30 @@ body {
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .app-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
   width: 100vw;
   padding: 10px 30px;
+  height: 60px;
+  background: #fff;
+  /*box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1);*/
 }
 
-.app-nav>a {
+.app-nav > a {
   color: #555;
   font-size: 20px;
   text-decoration: none;
+  line-height: 2;
 }
 
 .app-title {
@@ -36,4 +49,6 @@ body {
   padding-left: 10vw;
   font-family: 'Lato', sans-serif;
   color: #333;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }

@@ -7,8 +7,11 @@ const Carousel = ({ carouselData, ...props }) => {
     <div className="carousel" {...props} >
       <ul className="carousel__items">
         {carouselData.map(({ text, imageUrl }, i) => (
-          <li key={i} className="carousel__item" style={{ backgroundImage: `url(${imageUrl})` }}>
-            {text}
+          <li key={i} className="carousel__item">
+            <div className="carousel__item__image" style={{ backgroundImage: `url(${imageUrl})` }}></div>
+            <span className="carousel__item__text">
+              {text}
+            </span>
           </li>
         ))}
       </ul>
